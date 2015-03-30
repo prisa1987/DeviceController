@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical" >
+
+    <LinearLayout
+    android:id="@+id/linearLayout2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal" 
+    android:background="#89BDAA">
+
+        <LinearLayout
+	    android:id="@+id/linearLayout2"
+	    android:layout_width="0dp"
+        android:layout_weight="1"
+	    android:layout_height="match_parent"
+	    android:background="#2c3331"
+	    android:padding="30dp"
+	    android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bc_4" />
+
+            <TextView
+                android:id="@+id/l_topic"
+                style="@style/l_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Successful" />
+	    
+        </LinearLayout>
+        
+        <LinearLayout
+	    android:id="@+id/linearLayout2"
+	    android:layout_width="0dp"
+        android:layout_weight="1.5"
+	    android:layout_height="fill_parent"
+	    android:layout_marginTop="40dp"
+	    android:orientation="vertical">
+             
+             <TextView
+                android:id="@+id/r_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="We've already send a SMS to"
+                android:textSize ="30sp" />	
+             
+             <TextView
+                android:id="@+id/r_phonenumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="3453456789394" 
+                android:maxLength="12"  
+                android:textSize ="60sp"/>
+			  
+            <Button
+                android:id="@+id/home_button"
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="#2C9C72"
+                android:padding="10dp"
+                android:text="Back to home"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+            
+        </LinearLayout>
+        
+    
+
+    
+
+	</LinearLayout>
+
+</LinearLayout>
+</ScrollView>

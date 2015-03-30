@@ -1,0 +1,7 @@
+@(device: models.Device)
+<?xml version="1.0" encoding="UTF-8"?>
+<device>
+	<id>@device.device_id</id>
+	<name>@device.name</name>
+	<status>@device.status</status>
+</device>

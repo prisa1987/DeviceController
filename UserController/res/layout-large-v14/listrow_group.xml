@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:maxHeight="50dip"
+    android:padding="10dp"
+    android:orientation="horizontal"
+    android:background= "@drawable/groupbg">
+
+    <ImageView
+        android:id="@+id/accordionIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:id="@+id/accordionTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/accordionIndicator"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:layout_marginLeft="10dp"
+         android:layout_marginTop="14dp"
+        android:text="Hello"
+        android:textStyle="bold"
+        android:textColor="#515B6B" />
+
+</LinearLayout>

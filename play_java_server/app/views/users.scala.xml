@@ -1,0 +1,12 @@
+@(users: List[models.User])
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+	@for(user <- users) {
+	<user>
+		<id>@user.user_id</id>
+		<username>@user.getName()</username>
+		<phonenumber>@user.getPhoneNumber()</phonenumber>
+		<date>@user.getDate().format("yyyy-MM-dd'T'HH:mm:ss")</date>
+	</user>
+	}
+</users>

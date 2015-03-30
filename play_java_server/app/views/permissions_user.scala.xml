@@ -1,0 +1,14 @@
+@(permissions: List[models.Permission])
+<?xml version="1.0" encoding="UTF-8"?>
+<permissions>
+	@for(permission <- permissions) {
+	<permission>
+		<id>@permission.permission_id</id>
+		<device>
+			<id>@permission.device.device_id</id>
+			<name>@permission.device.getName()</name>
+		</device>
+		<status>@permission.status</status>
+	</permission>
+	}
+</permissions>

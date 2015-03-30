@@ -1,0 +1,68 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# RESTful
+# ~~~~
+# User Collection
+## admin
+GET		/api/v1/users				controllers.UserController.getUsersXML()
+GET		/api/v1/users/self			controllers.UserController.getUserSelfXML()
+## admin
+GET		/api/v1/users/:id			controllers.UserController.getUserXML(id: Long)
+DELETE	/api/v1/users/:id			controllers.UserController.deleteUser(id: Long)
+
+# Room Collection
+GET		/api/v1/rooms 				controllers.RoomController.roomsXML()
+GET		/api/v1/rooms/devices		controllers.RoomController.roomsDevicesXML()
+GET		/api/v1/rooms/:id			controllers.RoomController.roomXML(id: Long)
+GET     /api/v1/rooms/:id/devices   controllers.RoomController.roomDevicesXML(id: Long)
+
+# Device Collection
+GET     /api/v1/devices             controllers.DeviceController.devicesXML()
+GET     /api/v1/devices/:id         controllers.DeviceController.deviceXML(id: Long)
+PUT		/api/v1/devices/:id/status/:status	controllers.DeviceController.setDeviceStatus(id: Long, status: Boolean)
+
+# Permission Collection
+## admin
+GET		/api/v1/permissions			controllers.PermissionController.getPermissionsXML()
+GET		/api/v1/permissions/users/self	controllers.PermissionController.getPermissionsUserSelfXML()
+#admin
+GET		/api/v1/permissions/users/:id	controllers.PermissionController.getPermissionsUserXML(id: Long)
+GET		/api/v1/permissions/:id     controllers.PermissionController.getPermissionXML(id: Long)
+
+# Admin
+#PUT		/api/v1/permissions/requests/:id/approve		controllers.PermissionController.approveRequest(id: Long)
+# PUT		/api/v1/permissions/users/:userid/devices/:deviceid/revoke		controllers.PermissionController.revokePermission(userid: Long, deviceid: Long)
+PUT		/api/v1/permissions/users/:userid/devices/:deviceid/change		controllers.PermissionController.changePermission(userid: Long, deviceid: Long)
+#PUT		/api/v1/permissions/requests/:id/reject		controllers.PermissionController.rejectRequest(id: Long)
+
+# Request Collection
+GET		/api/v1/requests			controllers.RequestController.requestsXML()
+GET		/api/v1/requests/users/self controllers.RequestController.requestsUserSelfXML()
+GET		/api/v1/requests/users/:id	controllers.RequestController.requestsUserXML(id: Long)
+GET		/api/v1/requests/:id		controllers.RequestController.requestXML(id: Long)
+PUT		/api/v1/requests/:id/confirm controllers.RequestController.comfirmRequest(id: Long)
+# admin
+PUT		/api/v1/requests/:id/approve controllers.RequestController.approveRequest(id: Long)
+PUT		/api/v1/requests/:id/reject  controllers.RequestController.rejectRequest(id: Long)
+DELETE	/api/v1/requests/:id		 controllers.RequestController.removeRequest(id: Long)
+POST 	/api/v1/requests/devices/:deviceid 		controllers.RequestController.addNewRequest(deviceid: Long)
+
+# Register
+POST	/api/v1/register			controllers.Application.register()
+
+# User Profile Picture
+# GET		/api/v1/profile/:id			controllers.Assets.at(id)
+# GET     /api/v1/users/profile/:id       controllers.Assets.at(path="/public/images", id)
+GET     /api/v1/users/profile/:id       controllers.UserController.getUserProfilePicture(id: Long)
+# GET     /api/v1/users/profile/:id/:width/:height       controllers.UserController.getUserProfilePicture(id: Long, width: Double, height: Double)
+
+# Server Publick Key
+GET		/api/v1/serverpublickey		controllers.Application.getServerPublicKey()

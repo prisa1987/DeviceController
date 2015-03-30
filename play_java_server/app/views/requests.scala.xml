@@ -1,0 +1,19 @@
+@(requests: List[models.Request])
+<?xml version="1.0" encoding="UTF-8"?>
+<requests>
+	@for(request <- requests) {
+	<request>
+		<id>@request.request_id</id>
+		<date>@request.getDate().format("yyyy-MM-dd'T'HH:mm:ss")</date>
+		<status>@request.getStatus().toString()</status>
+		<user>
+			<id>@request.user.user_id</id>
+			<username>@request.user.getName()</username>
+		</user>
+		<device>
+			<id>@request.device.device_id</id>
+			<name>@request.device.getName()</name>
+		</device>
+	</request>
+	}
+</requests>

@@ -1,0 +1,10 @@
+@(rooms: List[models.Room])
+<?xml version="1.0" encoding="UTF-8"?>
+<rooms>
+	@for(room <- rooms) {
+	<room>
+		<id>@room.room_id</id>
+		<name>@room.name</name>
+	</room>
+	}	
+</rooms>

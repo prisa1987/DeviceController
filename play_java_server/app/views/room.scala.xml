@@ -1,0 +1,6 @@
+@(room: models.Room)
+<?xml version="1.0" encoding="UTF-8"?>
+<room>
+	<id>@room.room_id</id>
+	<name>@room.name</name>
+</room>

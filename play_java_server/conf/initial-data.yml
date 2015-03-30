@@ -1,0 +1,25 @@
+devices:
+
+    - !!models.Device
+        device_id:          1
+        name:               Air's Computer
+        status:             false
+
+    - !!models.Device
+        device_id:          2
+        name:               Neko's Computer
+        status:             true
+
+rooms:
+
+    - !!models.Room
+        room_id:            1
+        name:               ABCDEF
+
+        devices:
+
+            - !!models.Device
+                device_id:          1
+            
+            - !!models.Device
+                device_id:          2

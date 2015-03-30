@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<LinearLayout 
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/container"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#89BDAA"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#2c3331"
+            android:orientation="vertical"
+            android:padding="30dp" >
+          
+            
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bc_2" />
+            
+
+            <TextView
+                android:id="@+id/l_topic"
+                style="@style/l_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Identification" />
+
+            <TextView
+                android:id="@+id/l_desc"
+                style="@style/l_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take a photo to identify yourself" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.5"
+            
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="40dp" >
+
+                <TextView
+                    android:id="@+id/r_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name : "
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="548dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp" >
+				
+                <TextView
+                    android:id="@+id/textNumber"
+                    android:layout_width="337dp"
+                    android:layout_height="271dp"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:textSize="170sp" />
+                
+                <ImageView
+                    android:id="@+id/ImageViewDetect"
+                    android:layout_width="350dp"
+                    android:layout_height="320dp"
+                    android:layout_gravity="center"
+                   />
+
+                
+
+                <SurfaceView
+                    android:id="@+id/imgPreview"
+                    android:layout_width="350dp"
+                    android:layout_height="320dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/abc_ab_stacked_solid_light_holo" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/cap_button"
+                android:layout_width="350dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-30dp"
+                
+                android:background="#F37158"
+                android:text="Capture"
+                android:textColor="#fff"
+                android:textSize="40sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" 
+                android:paddingTop="40dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/back_button"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:background="#42574F"
+                    android:padding="10dp"
+                    android:text="Back"
+                    android:textColor="#fff"
+                    android:textSize="40sp" />
+                <Button
+                    android:id="@+id/next_button"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#2C9C72"
+                    android:padding="10dp"
+                    android:text="Next"
+                    android:textColor="#fff"
+                    android:textSize="40sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
